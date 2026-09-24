@@ -207,3 +207,18 @@ Das Protokoll hält wesentliche tatsächliche Schritte fest. Neue Einträge werd
 - Ziel: privates Repository ucarsinan/task-management. Vorhandene Git-Identität verwenden; ein initialer Commit enthält den zusammenhängenden, lokal geprüften Projektstand.
 - Prüfung: Abgabedateien, Ausschlüsse, interne Dokumentlinks und unerwünschte Referenzen vor Commit prüfen. Build-/Testartefakte und lokale Daten bleiben ausgeschlossen.
 - Nächster Nachweis: echter frischer Git-Checkout, Push und GitHub-Actions-Lauf. Diese Schritte sind zu diesem Protokollzeitpunkt noch nicht abgeschlossen.
+
+## LOG-026 — Privates Repository und echter Checkout
+
+- Datum: 24.09.2026. Bezug: P07.
+- Ergebnis: Privates Repository ucarsinan/task-management angelegt. Initialer Commit 1bc14d3 mit 62 geprüften Dateien auf main hochgeladen. 19 interne Dokumentlinks gültig, keine unerwünschten Referenzen oder sensiblen Marker in Abgabedateien.
+- Checkout: Tatsächlich von GitHub in ein frisches Verzeichnis geklont. Maven Verify mit 69 erfolgreichen Tests, Spotless, Enforcer und SpotBugs; npm ci, 15 Browserfälle und Neustart-/Persistenzabnahme bestanden. Checkout danach unverändert.
+- Laufzeitprüfung: 1.000 Aufgaben, fünf Listenabrufe 245,91 / 215,09 / 122,09 / 99,91 / 88,71 ms; neutraler Datenbankfehler mit HTTP 500.
+- CI: Quality-Lauf 36040710444 für Commit 1bc14d3 gestartet; Endergebnis zu diesem Protokollzeitpunkt noch offen. Automatische Dependency-Vorschläge werden nicht ungeprüft übernommen. Keine Einladungen oder Nachrichten versendet.
+
+## LOG-027 — Erfolgreiche GitHub-CI und Abschluss P07
+
+- Datum: 24.09.2026. Bezug: P07, R11.
+- Der [Quality-Lauf 36040710444](https://github.com/ucarsinan/task-management/actions/runs/36040710444) für Anwendungsstand `1bc14d3` ist erfolgreich abgeschlossen. Build, statische Analyse, Abhängigkeitsprüfung, Browser-/axe-Prüfung und Neustart-/Persistenzabnahme bestanden auf GitHub.
+- README, Qualitätsnachweis und Aufgabenstatus auf den belegten Abschluss aktualisiert. Dieser Abschluss ergänzt ausschließlich Dokumentation; der geprüfte Anwendungscode bleibt unverändert.
+- Repository privat im Eigentümerkonto. Keine Einladungen oder Nachrichten versendet. Automatische Abhängigkeitsvorschläge bleiben separat zu prüfen.

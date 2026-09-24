@@ -1,6 +1,6 @@
 # Qualitätsstrategie und Abnahme
 
-Status: P01–P06 lokal geprüft. Fachliche Abläufe, statische Analyse, Browser-/axe-Abnahme, Abhängigkeiten und Start-/Persistenzprüfung bestanden. Tatsächlicher Git-Checkout und Live-CI folgen in P07.
+Status: P01–P09 abgeschlossen. Fachliche Abläufe, statische Analyse, Browser-/axe-Abnahme, Abhängigkeiten und Start-/Persistenzprüfung bestanden. Frischer GitHub-Checkout und GitHub-CI erfolgreich geprüft.
 
 ## Prüfungen nach Risiko
 
@@ -128,3 +128,9 @@ CI ist vorbereitet, aber noch nicht auf GitHub ausgeführt. Da noch kein Git-Rep
 Mobile Kontexte emulieren Touch-Bedienung; echte Geräte wurden nicht geprüft. Screenshots von Aufgabenliste, langen Namen und Dialogen visuell kontrolliert. Kein horizontaler Überlauf bei 320/375/1280 px. axe ohne Befund in den geprüften Zuständen; weiterhin keine vollständige WCAG-Zertifizierung. Fokus im Namensfeld bzw. auf Abbrechen, Escape, Rückgabe des Fokus, Nicht-Speichern beim Abbrechen und Rückgängig getestet. Bei Dialog-Ladefehler bleibt die Aufgabe unverändert und der Dialog schließbar.
 
 CSS verwendet mobile Basisregeln und ausschließlich min-width-Layout-Erweiterungen. Mobile Eingaben haben 16 px Schriftgröße; Icon- und Statusaktionen mindestens 44 × 44 px Trefferfläche. Live-Vorschau mit finaler JAR neu gestartet; Erreichbarkeit mit HTTP 200 bestätigt.
+
+## Nachweis P07 — GitHub-Abgabe
+
+Das private Repository [ucarsinan/task-management](https://github.com/ucarsinan/task-management) enthält den geprüften Anwendungsstand `1bc14d3`. Ein tatsächlicher frischer GitHub-Checkout besteht Maven Verify mit 69 Java-Prüfungen ohne Fehler oder übersprungene Tests, Spotless, Enforcer, SpotBugs, npm ci, 15 Browserfälle und die Neustart-/Persistenzabnahme. Der Checkout blieb nach den Prüfungen unverändert.
+
+Der [Quality-Lauf 36040710444](https://github.com/ucarsinan/task-management/actions/runs/36040710444) für diesen Commit ist erfolgreich abgeschlossen: Build, statische Analyse, Abhängigkeitsprüfungen, Browser-/axe-Tests und Persistenzabnahme. Der Zugriff ist privat im Eigentümerkonto; eine Einladung weiterer Empfänger wurde nicht beauftragt. R11 ist für die vereinbarte Bereitstellung im privaten Repository erfüllt.

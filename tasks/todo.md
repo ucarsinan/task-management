@@ -137,11 +137,11 @@ Prüfung: Abnahmeszenario aus QUALITY vollständig dokumentieren. Bereiche: READ
 
 ## P07: Abgabe
 
-Status: in Arbeit. Abhängigkeit: K3. Ziel: ucarsinan/task-management, privat.
+Status: erledigt. Abhängigkeit: K3. Ziel: ucarsinan/task-management, privat. Nachweis: LOG-026 und LOG-027.
 
-- [ ] Abgabediff, Repository-Dateien und Git-Metadaten prüfen; keine privaten Unterlagen oder Zugangsdaten.
-- [ ] Geprüften Stand am festgelegten GitHub-Ziel bereitstellen oder als ZIP abgeben.
-- [ ] Frischen Git-Checkout vollständig prüfen; Commit-/Abgabestand, Zugriff, erfolgreichen CI-Lauf und R11 dokumentieren.
+- [x] Abgabediff, Repository-Dateien und Git-Metadaten prüfen; keine privaten Unterlagen oder Zugangsdaten.
+- [x] Geprüften Stand am festgelegten GitHub-Ziel bereitstellen oder als ZIP abgeben.
+- [x] Frischen Git-Checkout vollständig prüfen; Commit-/Abgabestand, Zugriff, erfolgreichen CI-Lauf und R11 dokumentieren.
 
 Prüfung: veröffentlichte Dateien und Commit-Stand mit lokal geprüftem Stand vergleichen; Zugriff für den vorgesehenen Empfänger berücksichtigen. Umfang: klein. Nachrichten oder Einladungen werden als eigener Abgabeschritt erst nach entsprechendem Auftrag versendet.
 
