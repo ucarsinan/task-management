@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: task-management
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:${TASK_DB_PORT:5433}/task_management
+    username: task_management
+    password: ${TASK_DB_PASSWORD:local-development-only}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate.jdbc.time_zone: UTC
+  sql:
+    init:
+      mode: never
+server:
+  address: 127.0.0.1
+  error:
+    include-message: never
+    include-stacktrace: never
+    include-binding-errors: never

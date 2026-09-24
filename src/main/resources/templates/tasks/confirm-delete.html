@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Aufgabe löschen? · Task Management</title><link rel="stylesheet" th:href="@{/css/app.css}"></head>
+<body><a class="skip-link" href="#main">Zum Inhalt</a>
+<header class="topbar"><a class="brand" th:href="@{/tasks}">Task Management</a></header>
+<main id="main" class="workspace edit-workspace">
+<header class="page-heading"><p class="eyebrow">Bitte bestätigen</p><h1>Aufgabe löschen?</h1><p>Prüfe kurz, ob du die richtige Aufgabe ausgewählt hast.</p></header>
+<section class="create-panel confirmation" aria-label="Löschbestätigung">
+    <p class="confirmation-label">Diese Aufgabe wird gelöscht</p><p class="task-preview" th:text="${task.name}"></p>
+    <p class="hint">Die Aufgabe wird dauerhaft entfernt. Das lässt sich nicht rückgängig machen.</p>
+    <form th:action="@{/tasks/{id}/delete(id=${task.id})}" method="post" class="form-actions">
+        <a class="cancel-link" th:href="@{/tasks}">Abbrechen</a><button class="danger-button" type="submit">Endgültig löschen</button>
+    </form>
+</section>
+</main></body></html>

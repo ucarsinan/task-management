@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+    <!-- Spring owns and intentionally shares the injected application service; it is not caller-owned mutable data. -->
+    <Match>
+        <Class name="de.sinanucar.taskmanagement.task.web.TaskController"/>
+        <Method name="&lt;init&gt;"/>
+        <Bug pattern="EI_EXPOSE_REP2"/>
+    </Match>
+    <!-- JPA requires a non-final entity. Constructor validation rejects invalid values; the object holds no privileged resource and defines no finalizer. -->
+    <Match>
+        <Class name="de.sinanucar.taskmanagement.task.domain.Task"/>
+        <Method name="&lt;init&gt;"/>
+        <Bug pattern="CT_CONSTRUCTOR_THROW"/>
+    </Match>
+</FindBugsFilter>

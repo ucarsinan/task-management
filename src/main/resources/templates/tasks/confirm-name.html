@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Änderung prüfen · Task Management</title><link rel="stylesheet" th:href="@{/css/app.css}"></head>
+<body><a class="skip-link" href="#main">Zum Inhalt</a>
+<header class="topbar"><a class="brand" th:href="@{/tasks}">Task Management</a></header>
+<main id="main" class="workspace edit-workspace">
+<header class="page-heading"><p class="eyebrow">Name ändern</p><h1>Änderung prüfen</h1><p>Nur der Name ändert sich. Status und Priorität bleiben erhalten.</p></header>
+<section class="create-panel confirmation" aria-label="Namensänderung bestätigen">
+    <dl class="name-comparison"><dt>Bisheriger Name</dt><dd th:text="${task.name}"></dd><dt>Neuer Name</dt><dd class="new-name" th:text="${renameForm.name}"></dd></dl>
+    <form th:action="@{/tasks/{id}/name(id=${task.id})}" method="post" class="form-actions">
+        <input type="hidden" name="name" th:value="${renameForm.name}">
+        <a class="cancel-link" th:href="@{/tasks/{id}/edit(id=${task.id})}">Abbrechen</a><button type="submit">Umbenennen bestätigen</button>
+    </form>
+</section>
+</main></body></html>

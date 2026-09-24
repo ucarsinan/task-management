@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Aufgabe umbenennen · Task Management</title><link rel="stylesheet" th:href="@{/css/app.css}"></head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt</a>
+<header class="topbar"><a class="brand" th:href="@{/tasks}">Task Management</a></header>
+<main id="main" class="workspace edit-workspace">
+    <a class="back-link" th:href="@{/tasks}">Zur Aufgabenliste</a>
+    <header class="page-heading"><h1>Aufgabe umbenennen</h1><p>Gib einen neuen Namen ein. Im nächsten Schritt prüfst du die Änderung.</p></header>
+    <form class="create-panel" th:action="@{/tasks/{id}/name/preview(id=${taskId})}" method="post" th:object="${renameForm}" novalidate>
+        <p class="form-notice" role="alert" th:if="${#fields.hasErrors('*')}">Bitte prüfe deine Eingaben.</p>
+        <label for="name">Name</label>
+        <input id="name" type="text" th:field="*{name}" maxlength="200" required th:attr="aria-invalid=${#fields.hasErrors('name')},aria-describedby=${#fields.hasErrors('name') ? 'name-hint name-error' : 'name-hint'}">
+        <p id="name-hint" class="hint">Kurz und konkret, maximal 200 Zeichen.</p>
+        <p id="name-error" class="field-error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+        <div class="form-actions"><button type="submit">Änderung prüfen</button><a th:href="@{/tasks}">Abbrechen</a></div>
+    </form>
+</main></body></html>
