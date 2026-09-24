@@ -119,14 +119,19 @@ public class TaskController {
 
     @PostMapping("/tasks/{id}/done")
     RedirectView setDone(
-            @PathVariable Long id, @RequestParam String done, RedirectAttributes redirect) {
+            @PathVariable Long id,
+            @RequestParam String done,
+            @RequestParam(defaultValue = "false") boolean undo,
+            RedirectAttributes redirect) {
         if (!"true".equals(done) && !"false".equals(done)) {
             throw new org.springframework.web.server.ResponseStatusException(
                     HttpStatus.BAD_REQUEST);
         }
         var previous = service.getTask(id);
         service.setTaskDone(id, Boolean.parseBoolean(done));
-        redirect.addFlashAttribute("undoTask", previous);
+        if (!undo) {
+            redirect.addFlashAttribute("undoTask", previous);
+        }
         return redirectToTasks();
     }
 

@@ -4,7 +4,7 @@ Eine kleine Webanwendung zum Erstellen, Anzeigen, Umbenennen, Erledigen und Lös
 
 ## Projektstand
 
-Stand: 24.09.2026. P00–P06 und die zusätzliche UI-Überarbeitung sind implementiert und lokal geprüft. Aufgaben lassen sich über die deutsche Browseroberfläche anlegen, anzeigen, umbenennen, erledigen, wieder öffnen und löschen.
+Stand: 24.09.2026. Technische Umsetzung einschließlich UI-Überarbeitung und Rückgängig-Korrektur implementiert und lokal geprüft. GitHub-Bereitstellung und Empfängerübergabe werden getrennt in [Aufgabenstatus](tasks/todo.md) geführt. Aufgaben lassen sich über die deutsche Browseroberfläche anlegen, anzeigen, umbenennen, erledigen, wieder öffnen und löschen.
 
 ## Technischer Rahmen
 

@@ -14,6 +14,7 @@
         <p role="status"><strong>Status geändert.</strong> <span th:text="${undoTask.name}"></span></p>
         <form th:action="@{/tasks/{id}/done(id=${undoTask.id})}" method="post">
             <input type="hidden" name="done" th:value="${undoTask.done}">
+            <input type="hidden" name="undo" value="true">
             <button class="secondary-button" type="submit">Rückgängig</button>
         </form>
     </section>

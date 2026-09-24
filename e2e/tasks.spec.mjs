@@ -72,6 +72,9 @@ test('complete task lifecycle, keyboard, validation, links and accessibility', a
   await audit(page);
   await page.getByRole('button', { name: 'Rückgängig', exact: true }).click();
   await expect(page.getByText('Offen', { exact: true })).toBeVisible();
+  await expect(page.getByRole('region', { name: 'Statusänderung' })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Rückgängig', exact: true })).toHaveCount(0);
+  await page.screenshot({ path: testInfo.outputPath('after-undo.png'), fullPage: true });
   await expect(page.locator('time')).toHaveAttribute('datetime', created);
   await expect(page.getByRole('region', { name: 'Aufgabenliste', exact: true }).getByText('Dringend', { exact: true })).toBeVisible();
   await page.getByRole('link', { name: 'Löschen: Geprüfte Aufgabe', exact: true }).click();
@@ -111,6 +114,13 @@ test('confirmation flows remain usable without JavaScript', async ({ browser, ba
     await page.getByRole('textbox', { name: 'Name', exact: true }).fill('Fallback geprüft');
     await page.getByRole('button', { name: 'Änderung prüfen' }).click();
     await page.getByRole('button', { name: 'Umbenennen bestätigen' }).click();
+    await page.getByRole('button', { name: 'Als erledigt markieren: Fallback geprüft', exact: true }).click();
+    await page.getByRole('button', { name: 'Wieder öffnen: Fallback geprüft', exact: true }).click();
+    await page.getByRole('button', { name: 'Rückgängig', exact: true }).click();
+    await expect(page.getByRole('button', { name: 'Wieder öffnen: Fallback geprüft', exact: true })).toBeVisible();
+    await expect(page.getByRole('region', { name: 'Statusänderung' })).toHaveCount(0);
+    await page.reload();
+    await expect(page.getByRole('button', { name: 'Wieder öffnen: Fallback geprüft', exact: true })).toBeVisible();
     await page.getByRole('link', { name: 'Löschen: Fallback geprüft', exact: true }).click();
     await page.getByRole('button', { name: 'Endgültig löschen' }).click();
     await expect(page.getByRole('heading', { name: 'Noch keine Aufgaben' })).toBeVisible();

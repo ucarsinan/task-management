@@ -1,6 +1,6 @@
 # Qualitätsstrategie und Abnahme
 
-Status: P01–P09 abgeschlossen. Fachliche Abläufe, statische Analyse, Browser-/axe-Abnahme, Abhängigkeiten und Start-/Persistenzprüfung bestanden. Frischer GitHub-Checkout und GitHub-CI erfolgreich geprüft.
+Status: Technische Umsetzung und Abnahme abgeschlossen; formale Empfängerübergabe P07 in Arbeit. Fachliche Abläufe, statische Analyse, Browser-/axe-Abnahme, Abhängigkeiten und Start-/Persistenzprüfung bestanden. Frischer GitHub-Checkout und GitHub-CI erfolgreich geprüft.
 
 ## Prüfungen nach Risiko
 
@@ -115,7 +115,7 @@ Der separate Abnahmelauf bestätigt unveränderte Daten nach Anwendungs-/Postgre
 
 78 Produktionsabhängigkeiten nach Sicherheitsupdates ohne OSV-Treffer; npm audit ohne Treffer. SpotBugs läuft ohne offene Meldungen mit zwei eng begründeten Konstruktor-Ausnahmen. Details, Werkzeuge, Quellen und Einschränkungen: [Abhängigkeiten](DEPENDENCIES.md).
 
-CI ist vorbereitet, aber noch nicht auf GitHub ausgeführt. Da noch kein Git-Repository besteht, ist die geprüfte frische Quellkopie ausdrücklich kein Git-Checkout. Der tatsächliche Checkout und Live-CI bleiben P07 zugeordnet. Temporäre Testanwendungen und Datenbanken sind beendet.
+Zum damaligen P06-Prüfzeitpunkt war CI vorbereitet, aber noch nicht auf GitHub ausgeführt. Die damalige frische Quellkopie war ausdrücklich kein Git-Checkout. Der tatsächliche Checkout und Live-CI bleiben P07 zugeordnet. Temporäre Testanwendungen und Datenbanken sind beendet.
 
 ## Nachweis der UI-Überarbeitung
 
@@ -133,4 +133,4 @@ CSS verwendet mobile Basisregeln und ausschließlich min-width-Layout-Erweiterun
 
 Das private Repository [ucarsinan/task-management](https://github.com/ucarsinan/task-management) enthält den geprüften Anwendungsstand `1bc14d3`. Ein tatsächlicher frischer GitHub-Checkout besteht Maven Verify mit 69 Java-Prüfungen ohne Fehler oder übersprungene Tests, Spotless, Enforcer, SpotBugs, npm ci, 15 Browserfälle und die Neustart-/Persistenzabnahme. Der Checkout blieb nach den Prüfungen unverändert.
 
-Der [Quality-Lauf 36040710444](https://github.com/ucarsinan/task-management/actions/runs/36040710444) für diesen Commit ist erfolgreich abgeschlossen: Build, statische Analyse, Abhängigkeitsprüfungen, Browser-/axe-Tests und Persistenzabnahme. Der Zugriff ist privat im Eigentümerkonto; eine Einladung weiterer Empfänger wurde nicht beauftragt. R11 ist für die vereinbarte Bereitstellung im privaten Repository erfüllt.
+Der [Quality-Lauf 36040710444](https://github.com/ucarsinan/task-management/actions/runs/36040710444) für diesen Commit ist erfolgreich abgeschlossen: Build, statische Analyse, Abhängigkeitsprüfungen, Browser-/axe-Tests und Persistenzabnahme. Dieser Lauf belegt die technische Bereitstellung. R11 umfasst zusätzlich die Empfängerübergabe; deren aktueller Stand wird in tasks/todo.md geführt.

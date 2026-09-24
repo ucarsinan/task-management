@@ -20,7 +20,7 @@ Grundlage: die bereitgestellte Aufgabenbeschreibung, vollständig gelesen und vi
 | R08 | Task ändern: name beziehungsweise done | Name und Erledigt-Status lassen sich unabhängig ändern |
 | R09 | Task löschen | Gelöschte Aufgabe bleibt auch nach Neuladen entfernt |
 | R10 | Laufzeit direkt mit Java oder als Docker-Container | Mindestens ein dokumentierter Startweg ist geprüft |
-| R11 | Abgabe als ZIP oder über GitHub/GitLab | Vollständiges Projekt kann über den gewählten Kanal bezogen werden |
+| R11 | Abgabe als ZIP oder über GitHub/GitLab | Vollständiges Projekt an den vorgesehenen Empfänger übermitteln; bei privatem Repository Einladung und Zugriff berücksichtigen |
 
 Frontend-Technologie und Dependencies sind frei. Deutsch oder Englisch sind erlaubt. Docker für PostgreSQL ist optional. Eine README ist bei Erklärungsbedarf vorgesehen. Unklare Punkte dürfen eigenständig entschieden und begründet werden.
 
@@ -48,9 +48,10 @@ Authentifizierung, Rollen, Projekte, Kommentare, Tags, Fristen, Anhänge, Suche,
 
 R01 bis R11 sind nachvollziehbar erfüllt, die Qualitätskriterien aus [QUALITY.md](QUALITY.md) sind geprüft und Einschränkungen sind ehrlich dokumentiert. Ein nur teilweise umgesetztes oder ungeprüftes Kriterium gilt nicht als erledigt.
 
-## Noch zu klären oder zu prüfen
+## Aktueller Abnahmestand
 
-- Architektur am 24.09.2026 angenommen; technische Grundlage geprüft. Fachliche Oberfläche und vollständige Abnahme stehen aus.
-- Versionen und Generatorherkunft sind geprüft und festgeschrieben; siehe ADR 0002 und README. Java 17 und Framework-Major-Version 3 bleiben Vorgaben.
-- GitHub-Zielrepository und Sichtbarkeit vor Veröffentlichung festlegen. Aktuell existiert hier kein Repository.
-- Deadline, Zeitbudget und zusätzliche Bedingungen aus einer Begleitnachricht sind nicht bekannt. Es werden keine angenommen.
+- R01–R10 implementiert und geprüft. Architektur, Oberfläche, Persistenz und Qualitätsmaßnahmen sind dokumentiert.
+- Versionen und Generatorherkunft sind festgeschrieben; siehe ADR 0002 und README. Java 17 und Framework-Major-Version 3 bleiben Vorgaben.
+- Privates Repository: [ucarsinan/task-management](https://github.com/ucarsinan/task-management). Frischer Checkout und GitHub-CI geprüft.
+- R11: Repository-Bereitstellung abgeschlossen; aktuelle Übergabe und Empfängerzugriff siehe [Aufgabenstatus](../tasks/todo.md). Eine versendete Einladung ist noch kein angenommener Zugriff.
+- Deadline, Zeitbudget und zusätzliche Bedingungen aus einer Begleitnachricht sind nicht bekannt.

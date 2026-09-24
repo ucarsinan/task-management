@@ -222,3 +222,17 @@ Das Protokoll hält wesentliche tatsächliche Schritte fest. Neue Einträge werd
 - Der [Quality-Lauf 36040710444](https://github.com/ucarsinan/task-management/actions/runs/36040710444) für Anwendungsstand `1bc14d3` ist erfolgreich abgeschlossen. Build, statische Analyse, Abhängigkeitsprüfung, Browser-/axe-Prüfung und Neustart-/Persistenzabnahme bestanden auf GitHub.
 - README, Qualitätsnachweis und Aufgabenstatus auf den belegten Abschluss aktualisiert. Dieser Abschluss ergänzt ausschließlich Dokumentation; der geprüfte Anwendungscode bleibt unverändert.
 - Repository privat im Eigentümerkonto. Keine Einladungen oder Nachrichten versendet. Automatische Abhängigkeitsvorschläge bleiben separat zu prüfen.
+
+## LOG-028 — Rückgängig beendet den Statushinweis
+
+- Datum: 24.09.2026. Bezug: P10.
+- Ursache: Rückgängig verwendete den normalen Status-POST, der erneut ein undoTask-Flash-Attribut erzeugte. Der Status wurde wiederhergestellt, aber der obere Hinweis blieb bestehen.
+- Korrektur: Das Rückgängig-Formular kennzeichnet die Aktion mit undo=true; der Controller erzeugt hierfür keinen erneuten Hinweis. Listenreihenfolge und fachliche Statusvalidierung bleiben erhalten. Vertrag entsprechend präzisiert.
+- Nachweis: Erweiterter Webtest vor der Korrektur mit „FlashMap size expected 0 but was 1“ fehlgeschlagen. Danach vollständiger Maven-Verify-Lauf mit 69 erfolgreichen Prüfungen, Spotless, Enforcer und SpotBugs. Alle 15 Browserfälle bestanden; Rückgängig in beiden Richtungen einschließlich JavaScript-freiem Ablauf geprüft. Mobile und Desktop-Screenshots nach Rückgängig visuell geprüft.
+- Vorschau mit korrigierter JAR neu gestartet; HTTP 200 bestätigt. Änderungen lokal, noch nicht committed oder gepusht.
+
+## LOG-029 — Abgabestatus präzisieren
+
+- Datum: 24.09.2026. Bezug: P07/R11 und P10.
+- Veraltete Angaben zu Oberfläche, Repository und Abnahme korrigiert. R11 umfasst Empfängerübermittlung und Zugriff; LOG-027 belegte nur die technische Bereitstellung. Aufgabenstatus trennt Versand und Einladungsannahme.
+- Rückgängig-Fix mit den bereits bestandenen 69 Java-Prüfungen und 15 Browserfällen in den Übergabestand aufgenommen. Versand und Einladung beauftragt; tatsächliche Ergebnisse folgen separat.

@@ -394,8 +394,13 @@ class TaskWebIT {
         mvc.perform(
                         post("/tasks/{id}/done", id)
                                 .with(csrf())
-                                .param("done", Boolean.toString(previous.done())))
-                .andExpect(status().isSeeOther());
+                                .param("done", Boolean.toString(previous.done()))
+                                .param("undo", "true"))
+                .andExpect(status().isSeeOther())
+                .andExpect(flash().attributeCount(0));
+        mvc.perform(get("/tasks"))
+                .andExpect(content().string(not(containsString("Rückgängig"))))
+                .andExpect(content().string(containsString("Status")));
         assertThat(repository.findById(id).orElseThrow().isDone()).isFalse();
     }
 }

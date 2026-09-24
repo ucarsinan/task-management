@@ -137,11 +137,13 @@ Prüfung: Abnahmeszenario aus QUALITY vollständig dokumentieren. Bereiche: READ
 
 ## P07: Abgabe
 
-Status: erledigt. Abhängigkeit: K3. Ziel: ucarsinan/task-management, privat. Nachweis: LOG-026 und LOG-027.
+Status: in Arbeit — technische Bereitstellung geprüft; Empfängerübergabe beauftragt. Abhängigkeit: K3. Ziel: ucarsinan/task-management, privat.
 
 - [x] Abgabediff, Repository-Dateien und Git-Metadaten prüfen; keine privaten Unterlagen oder Zugangsdaten.
 - [x] Geprüften Stand am festgelegten GitHub-Ziel bereitstellen oder als ZIP abgeben.
-- [x] Frischen Git-Checkout vollständig prüfen; Commit-/Abgabestand, Zugriff, erfolgreichen CI-Lauf und R11 dokumentieren.
+- [x] Frischen Git-Checkout vollständig prüfen; Commit-/Abgabestand, Zugriff, erfolgreichen CI-Lauf dokumentieren.
+- [ ] Repository-Einladung und Übermittlung an den vorgesehenen Empfänger nachweisen.
+- [ ] Annahme der Einladung beziehungsweise tatsächlichen Empfängerzugriff nachweisen.
 
 Prüfung: veröffentlichte Dateien und Commit-Stand mit lokal geprüftem Stand vergleichen; Zugriff für den vorgesehenen Empfänger berücksichtigen. Umfang: klein. Nachrichten oder Einladungen werden als eigener Abgabeschritt erst nach entsprechendem Auftrag versendet.
 
@@ -164,3 +166,10 @@ Status: erledigt. Nachweis: LOG-023. Auftrag: ruhig und hochwertig, helle Graut�
 - [x] Native Dialoge mit Fokusführung, Abbrechen und serverseitigem Fallback integrieren.
 - [x] Browsermatrix 320/375/1280 px mit Touch, Tastatur, axe und JavaScript-freiem Fallback abschließen.
 - [x] Sichtprüfung, Dokumentation und aktualisierte Live-Vorschau abschließen.
+
+## P10: Rückgängig-Hinweis abschließen
+
+Status: erledigt. Nachweis: LOG-028.
+
+- [x] Rückgängig stellt den vorherigen Status wieder her und entfernt den oberen Hinweis.
+- [x] Web-Regression und Browsermatrix prüfen; Vorschau aktualisieren.
