@@ -120,7 +120,7 @@ Browser- und Abnahmeskripte starten eigene temporäre PostgreSQL-Container und d
 
 Der Browserlauf umfasst 15 Fälle in Chromium bei 320/375/1280 px und WebKit bei 375/1280 px. Er prüft Aufgabenablauf, Eingabefehler, Tastatur, Fokus-Rückgabe, Escape, lange Namen, sichere HTML-Ausgabe, Links, axe-Regeln, Dialog-Ladefehler und Fallback ohne JavaScript. Mobile Kontexte verwenden Touch-Emulation; echte Mobilgeräte wurden nicht getestet. Der separate Abnahmelauf prüft Datenpersistenz nach Anwendungs-/Datenbankneustart, 1.000 Aufgaben und eine neutrale 500-Fehlerseite bei Datenbankausfall. Er ist ein repräsentativer lokaler Funktionstest, kein Lasttest.
 
-Das Projekt liegt im privaten [GitHub-Repository](https://github.com/ucarsinan/task-management). Der frische GitHub-Checkout von Commit `1bc14d3` besteht Maven Verify, 15 Browserfälle und die Neustart-/Persistenzabnahme. Die CI in `.github/workflows/quality.yml` verwendet festgeschriebene Actions und ausschließlich Leserechte. Der erste [Quality-Lauf](https://github.com/ucarsinan/task-management/actions/runs/36040710444) ist erfolgreich abgeschlossen. Details: [Qualität](docs/QUALITY.md) und [Abhängigkeiten](docs/DEPENDENCIES.md).
+Das Projekt liegt im öffentlichen [GitHub-Repository](https://github.com/ucarsinan/task-management). Der frische GitHub-Checkout von Commit `1bc14d3` besteht Maven Verify, 15 Browserfälle und die Neustart-/Persistenzabnahme. Die CI in `.github/workflows/quality.yml` verwendet festgeschriebene Actions und ausschließlich Leserechte. Der erste [Quality-Lauf](https://github.com/ucarsinan/task-management/actions/runs/36040710444) ist erfolgreich abgeschlossen. Details: [Qualität](docs/QUALITY.md) und [Abhängigkeiten](docs/DEPENDENCIES.md).
 
 
 ## Dokumentationsregeln

@@ -137,13 +137,13 @@ Prüfung: Abnahmeszenario aus QUALITY vollständig dokumentieren. Bereiche: READ
 
 ## P07: Abgabe
 
-Status: in Arbeit — technische Bereitstellung geprüft; Empfängerübergabe beauftragt. Abhängigkeit: K3. Ziel: ucarsinan/task-management, privat.
+Status: erledigt — technische Bereitstellung und Übermittlung nachgewiesen. Nachweis: LOG-030. Abhängigkeit: K3. Ziel: ucarsinan/task-management, öffentlich.
 
 - [x] Abgabediff, Repository-Dateien und Git-Metadaten prüfen; keine privaten Unterlagen oder Zugangsdaten.
 - [x] Geprüften Stand am festgelegten GitHub-Ziel bereitstellen oder als ZIP abgeben.
 - [x] Frischen Git-Checkout vollständig prüfen; Commit-/Abgabestand, Zugriff, erfolgreichen CI-Lauf dokumentieren.
-- [ ] Repository-Einladung und Übermittlung an den vorgesehenen Empfänger nachweisen.
-- [ ] Annahme der Einladung beziehungsweise tatsächlichen Empfängerzugriff nachweisen.
+- [x] Übermittlung des öffentlichen Repository-Links an den vorgesehenen Empfänger nachweisen.
+- [x] Öffentlichen Lesezugriff ohne Anmeldung nachweisen; Einladung entfällt. Keine Schreibrechte vergeben.
 
 Prüfung: veröffentlichte Dateien und Commit-Stand mit lokal geprüftem Stand vergleichen; Zugriff für den vorgesehenen Empfänger berücksichtigen. Umfang: klein. Nachrichten oder Einladungen werden als eigener Abgabeschritt erst nach entsprechendem Auftrag versendet.
 

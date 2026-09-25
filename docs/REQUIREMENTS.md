@@ -52,6 +52,6 @@ R01 bis R11 sind nachvollziehbar erfüllt, die Qualitätskriterien aus [QUALITY.
 
 - R01–R10 implementiert und geprüft. Architektur, Oberfläche, Persistenz und Qualitätsmaßnahmen sind dokumentiert.
 - Versionen und Generatorherkunft sind festgeschrieben; siehe ADR 0002 und README. Java 17 und Framework-Major-Version 3 bleiben Vorgaben.
-- Privates Repository: [ucarsinan/task-management](https://github.com/ucarsinan/task-management). Frischer Checkout und GitHub-CI geprüft.
-- R11: Repository-Bereitstellung abgeschlossen; aktuelle Übergabe und Empfängerzugriff siehe [Aufgabenstatus](../tasks/todo.md). Eine versendete Einladung ist noch kein angenommener Zugriff.
+- Öffentliches Repository: [ucarsinan/task-management](https://github.com/ucarsinan/task-management). Frischer Checkout und GitHub-CI geprüft.
+- R11: Repository-Bereitstellung abgeschlossen; aktuelle Übergabe und Empfängerzugriff siehe [Aufgabenstatus](../tasks/todo.md). Das öffentliche Repository ist ohne Einladung lesbar; Schreibrechte werden nicht vergeben.
 - Deadline, Zeitbudget und zusätzliche Bedingungen aus einer Begleitnachricht sind nicht bekannt.

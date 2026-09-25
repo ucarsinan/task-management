@@ -236,3 +236,10 @@ Das Protokoll hält wesentliche tatsächliche Schritte fest. Neue Einträge werd
 - Datum: 24.09.2026. Bezug: P07/R11 und P10.
 - Veraltete Angaben zu Oberfläche, Repository und Abnahme korrigiert. R11 umfasst Empfängerübermittlung und Zugriff; LOG-027 belegte nur die technische Bereitstellung. Aufgabenstatus trennt Versand und Einladungsannahme.
 - Rückgängig-Fix mit den bereits bestandenen 69 Java-Prüfungen und 15 Browserfällen in den Übergabestand aufgenommen. Versand und Einladung beauftragt; tatsächliche Ergebnisse folgen separat.
+
+## LOG-030 — Öffentliche Übergabe ohne Mitarbeiterrechte
+
+- Datum: 25.09.2026. Bezug: P07/R11.
+- Repository auf ausdrücklichen Auftrag öffentlich gestellt; GitHub-Sichtbarkeit PUBLIC und HTTP 200 ohne Anmeldung bestätigt. Keine Mitarbeiterrechte vergeben, keine Einladung erforderlich.
+- Repository-Link mit README-Hinweis und geprüftem Anwendungsstand 2746a8a an den vorgesehenen Empfänger per E-Mail übermittelt; Versand bestätigt. Keine Aussage über eine Empfangsbestätigung.
+- CI für 2746a8a erfolgreich: Lauf 36049842243. Nachfolgende Änderungen betreffen nur Dokumentation; Diff-Prüfung erfolgreich. Frühere Angaben zur privaten Bereitstellung beschreiben den damaligen Stand.

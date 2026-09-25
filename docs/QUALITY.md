@@ -1,6 +1,6 @@
 # Qualitätsstrategie und Abnahme
 
-Status: Technische Umsetzung und Abnahme abgeschlossen; formale Empfängerübergabe P07 in Arbeit. Fachliche Abläufe, statische Analyse, Browser-/axe-Abnahme, Abhängigkeiten und Start-/Persistenzprüfung bestanden. Frischer GitHub-Checkout und GitHub-CI erfolgreich geprüft.
+Status: Technische Umsetzung und Abnahme abgeschlossen; formale Empfängerübergabe P07 abgeschlossen. Fachliche Abläufe, statische Analyse, Browser-/axe-Abnahme, Abhängigkeiten und Start-/Persistenzprüfung bestanden. Frischer GitHub-Checkout und GitHub-CI erfolgreich geprüft.
 
 ## Prüfungen nach Risiko
 
@@ -134,3 +134,7 @@ CSS verwendet mobile Basisregeln und ausschließlich min-width-Layout-Erweiterun
 Das private Repository [ucarsinan/task-management](https://github.com/ucarsinan/task-management) enthält den geprüften Anwendungsstand `1bc14d3`. Ein tatsächlicher frischer GitHub-Checkout besteht Maven Verify mit 69 Java-Prüfungen ohne Fehler oder übersprungene Tests, Spotless, Enforcer, SpotBugs, npm ci, 15 Browserfälle und die Neustart-/Persistenzabnahme. Der Checkout blieb nach den Prüfungen unverändert.
 
 Der [Quality-Lauf 36040710444](https://github.com/ucarsinan/task-management/actions/runs/36040710444) für diesen Commit ist erfolgreich abgeschlossen: Build, statische Analyse, Abhängigkeitsprüfungen, Browser-/axe-Tests und Persistenzabnahme. Dieser Lauf belegt die technische Bereitstellung. R11 umfasst zusätzlich die Empfängerübergabe; deren aktueller Stand wird in tasks/todo.md geführt.
+
+## Öffentliche Übergabe
+
+Am 25.09.2026 Repository auf öffentlich umgestellt und Zugriff ohne Anmeldung mit HTTP 200 bestätigt. Keine Mitarbeiterrechte vergeben. Repository-Link an den vorgesehenen Empfänger übermittelt; Versand bestätigt. Anwendungsstand 2746a8a besteht [Quality-Lauf 36049842243](https://github.com/ucarsinan/task-management/actions/runs/36049842243). Die anschließenden Änderungen betreffen ausschließlich den dokumentierten Übergabestatus. R11 ist erfüllt; Lesen oder Empfangsbestätigung durch den Empfänger wird nicht behauptet.

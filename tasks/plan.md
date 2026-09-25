@@ -1,6 +1,6 @@
 # Umsetzungsplan
 
-Status: Architektur angenommen; Technische Umsetzung P00–P06 und P08–P10 abgeschlossen; Empfängerübergabe P07 in Arbeit. Privates GitHub-Repository, frischer Checkout und erfolgreiche CI sind dokumentiert. Aktueller Bearbeitungsstatus ausschließlich in [todo.md](todo.md).
+Status: Architektur angenommen; Technische Umsetzung P00–P06 und P08–P10 abgeschlossen; Empfängerübergabe P07 abgeschlossen. Öffentliches GitHub-Repository, frischer Checkout und erfolgreiche CI sind dokumentiert. Aktueller Bearbeitungsstatus ausschließlich in [todo.md](todo.md).
 
 ## Vorgehen
 
